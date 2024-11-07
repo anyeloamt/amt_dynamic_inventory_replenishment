@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- tree view definition -->
+    <record id="demand_category_tree" model="ir.ui.view">
+      <field name="name">inventory.demand.category.tree</field>
+      <field name="model">inventory.demand.category</field>
+      <field name="arch" type="xml">
+        <tree string="Demand Categories">
+          <field name="category_name"/>
+          <field name="sales_threshold"/>
+          <field name="max_inventory"/>
+          <field name="reorder_point"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- form view definition -->
+    <record id="demand_category_form" model="ir.ui.view">
+      <field name="name">inventory.demand.category.form</field>
+      <field name="model">inventory.demand.category</field>
+      <field name="arch" type="xml">
+        <form string="Demand Category">
+          <header>
+            <button name="action_reclassify_all_products" type="object" string="Reclassify All Products" class="oe_highlight"/>
+          </header>
+          <sheet>
+            <group>
+              <field name="category_name"/>
+              <field name="sales_threshold"/>
+            </group>
+            <group>
+              <field name="max_inventory"/>
+              <field name="reorder_point"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- action definition -->
+    <record id="demand_category_action" model="ir.actions.act_window">
+      <field name="name">Demand Categories</field>
+      <field name="res_model">inventory.demand.category</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new Demand Category.
+            </p>
+        </field>
+    </record>
+
+    <!-- menuitem definition -->
+    <menuitem id="menu_demand_category"
+              name="Demand Categories"
+              parent="stock.menu_stock_warehouse_mgmt"
+              action="demand_category_action"
+              sequence="10"
+    />
+</odoo>

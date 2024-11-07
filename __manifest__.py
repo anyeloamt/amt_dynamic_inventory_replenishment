@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "AMT Dynamic Inventory Replenishment App",
+    'name': 'AMT Dynamic Inventory Replenishment App',
     'version': '0.1',
-    'summary': """This module adds functionality to automatically replenish inventory based on sales""",
+    'summary': 'This module adds functionality to automatically replenish inventory based on sales',
     'description': """
         This module adds functionality to automatically replenish inventory based on sales.
     """,
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     'category': 'Inventory',
-
-    'depends': ['base'],
+    'data': [
+        'views/demand_category_views.xml',
+        'views/inventory_dashboard_views.xml',
+        'data/demand_category_data.xml',
+        'data/cron_jobs.xml'
+    ],
+    'depends': ['base', 'sale', 'stock'],
     'installable': True,
     'application': False,
     'license': 'OPL-1',
