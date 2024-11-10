@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree for products, inherit from current stock view -->
+    <record id="view_inventory_dashboard_list" model="ir.ui.view">
+        <field name="name">product.template.stock.tree.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="stock.view_stock_product_template_tree"/>
+        <field name="arch" type="xml">
+            <field name="virtual_available" position="after">
+                <field name="demand_category_id" optional="show" />
+                <field name="last_sales_qty" optional="show" />
+                <field name="last_classification_date" optional="show" />
+            </field>
+        </field>
+    </record>
+
+    <!--  Tree for product.product  -->
+    <record id="view_inventory_dashboard_list_product" model="ir.ui.view">
+        <field name="name">product.product.stock.tree.inherit</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="stock.view_stock_product_tree"/>
+        <field name="arch" type="xml">
+            <field name="virtual_available" position="after">
+                <field name="demand_category_id" optional="show" />
+                <field name="last_sales_qty" optional="show" />
+                <field name="last_classification_date" optional="show" />
+            </field>
+        </field>
+    </record>
+
+    <!--  Kanban for product.product  -->
+    <record id="view_inventory_dashboard_kanban_product" model="ir.ui.view">
+        <field name="name">product.product.stock.kanban.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="stock.product_template_kanban_stock_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='product_lst_price']" position="after">
+                <t groups="amt_dynamic_inventory_replenishment.group_inventory_demand_manager">
+                    <span>Demand Category: </span>
+                    <field name="demand_category_id" class="o_inline_block"/>
+                    <br/>
+                    <span>Last Sales Qty: </span>
+                    <field name="last_sales_qty" class="o_inline_block"/>
+                    <br/>
+                    <span>Last Classification Date: </span>
+                    <field name="last_classification_date" class="o_inline_block"/>
+                    <br/>
+                </t>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Search View for product.product -->
+    <record id="view_product_template_search" model="ir.ui.view">
+        <field name="name">product.template.search.stock.form</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="stock.stock_product_search_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='real_stock_negative']" position="after">
+                <separator/>
+                <field name="demand_category_id"/>
+                <filter string="Demand Category" name="demand_category_filter" domain="[]" context="{'group_by': 'demand_category_id'}"/>
+                <filter string="Demand Category Baja" name="demand_category_low" domain="[('demand_category_id', '=', 3)]"/>
+                <filter string="Demand Category Media" name="demand_category_medium" domain="[('demand_category_id', '=', 2)]"/>
+                <filter string="Demand Category Alta" name="demand_category_high" domain="[('demand_category_id', '=', 1)]"/>
+                <filter string="Uncategorized" name="demand_category_none" domain="[('demand_category_id', '=', False)]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Search View for product.template -->
+    <record id="view_product_template_search" model="ir.ui.view">
+        <field name="name">product.template.search.stock.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="stock.product_template_search_form_view_stock"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='real_stock_negative']" position="after">
+                <separator/>
+                <field name="demand_category_id"/>
+                <filter string="Demand Category" name="demand_category_filter" domain="[]" context="{'group_by': 'demand_category_id'}"/>
+                <filter string="Exclude Uncategorized" name="demand_category_exclude_uncategorized" domain="[('demand_category_id', '!=', False)]"/>
+                <filter string="Demand Category Baja" name="demand_category_low" domain="[('demand_category_id', '=', 3)]"/>
+                <filter string="Demand Category Media" name="demand_category_medium" domain="[('demand_category_id', '=', 2)]"/>
+                <filter string="Demand Category Alta" name="demand_category_high" domain="[('demand_category_id', '=', 1)]"/>
+                <filter string="Uncategorized" name="demand_category_none" domain="[('demand_category_id', '=', False)]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

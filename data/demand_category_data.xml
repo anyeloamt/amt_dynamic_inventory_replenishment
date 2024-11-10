@@ -1,0 +1,23 @@
+﻿<!-- data/demand_category_data.xml -->
+<odoo>
+    <record id="demand_category_high" model="inventory.demand.category">
+        <field name="category_name">Alta</field>
+        <field name="sales_threshold">15</field>
+        <field name="max_inventory">25</field>
+        <field name="reorder_point">10</field>
+    </record>
+
+    <record id="demand_category_medium" model="inventory.demand.category">
+        <field name="category_name">Media</field>
+        <field name="sales_threshold">5</field>
+        <field name="max_inventory">10</field>
+        <field name="reorder_point">5</field>
+    </record>
+
+    <record id="demand_category_low" model="inventory.demand.category">
+        <field name="category_name">Baja</field>
+        <field name="sales_threshold">1</field>
+        <field name="max_inventory">5</field>
+        <field name="reorder_point">2</field>
+    </record>
+</odoo>

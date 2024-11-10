@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Graph for products -->
+    <record id="view_inventory_dashboard_graph" model="ir.ui.view">
+        <field name="name">product.template.demand_category.graph</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <graph string="Products by Demand Category" type="bar" stacked="True">
+                <field name="demand_category_id"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_inventory_dashboard" model="ir.actions.act_window">
+        <field name="name">Inventory Dashboard</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">graph,tree,kanban</field>
+        <field name="view_id" ref="view_inventory_dashboard_list"/>
+        <field name="search_view_id" ref="view_product_template_search"/>
+    </record>
+
+    <!-- Server Action, TODO: Remove? -->
+    <record id="action_inventory_dashboard_reclassify" model="ir.actions.server">
+        <field name="name">Reclassify Products</field>
+        <field name="model_id" ref="product.model_product_template"/>
+        <field name="binding_model_id" ref="product.model_product_template"/>
+        <field name="state">code</field>
+        <field name="code">model.action_classify_products()</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_inventory_dashboard" name="Inventory Dashboard" parent="stock.menu_warehouse_report" action="action_inventory_dashboard"/>
+</odoo>

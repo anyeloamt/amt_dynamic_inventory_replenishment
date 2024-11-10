@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_product_reclassification_wizard_form" model="ir.ui.view">
+        <field name="name">product.reclassification.wizard.form</field>
+        <field name="model">product.reclassification.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Select Reflassification Period and Generation for Rules">
+                <group>
+                    <field name="period" />
+                </group>
+                <group>
+                    <field name="generate_reordering_rules" />
+                </group>
+                <footer>
+                    <button string="Reclassify Products" type="object" name="action_reclassify_products" class="oe_highlight"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action to Open the Wizard -->
+    <record id="action_product_reclassification_wizard" model="ir.actions.act_window">
+        <field name="name">Reclassify Products</field>
+        <field name="res_model">product.reclassification.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_reclassify_products_wizard" name="Reclassify Products" parent="stock.menu_stock_warehouse_mgmt" action="action_product_reclassification_wizard" sequence="10" />
+
+</odoo>

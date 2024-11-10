@@ -1,0 +1,8 @@
+<odoo>
+    <!-- Define Inventory Demand Manager Group -->
+    <record id="group_inventory_demand_manager" model="res.groups">
+        <field name="name">Inventory Demand Manager</field>
+        <field name="category_id" ref="base.module_category_inventory"/>
+        <field name="comment">Group for managing inventory demand categories and product classification</field>
+    </record>
+</odoo>
