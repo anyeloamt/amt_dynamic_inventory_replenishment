@@ -8,12 +8,21 @@
     """,
     'category': 'Inventory',
     'data': [
+        # views
         'views/demand_category_views.xml',
+        'views/product_views.xml',
         'views/inventory_dashboard_views.xml',
+        'views/product_reclassification_wizard_views.xml',
+
+        # data
         'data/demand_category_data.xml',
-        'data/cron_jobs.xml'
+        'data/cron_jobs.xml',
+
+        # security
+        'security/groups.xml',
+        'security/ir.model.access.csv',
     ],
-    'depends': ['base', 'sale', 'stock'],
+    'depends': ['sale', 'stock', 'point_of_sale'],
     'installable': True,
     'application': False,
     'license': 'OPL-1',

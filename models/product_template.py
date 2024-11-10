@@ -5,13 +5,19 @@ from odoo import models, fields, api
 import logging
 
 from odoo.exceptions import UserError
-from odoo.tools.populate import compute
 
 _logger = logging.getLogger(__name__)
 
 
 def _get_days_delta(period):
-    return {'month': 30, 'fortnight': 14, 'week': 7, 'day': 1}.get(period, 30)
+    return {
+        'all': 365 * 100, # 100 years
+        'year': 365,
+        'month': 30, 
+        'fortnight': 14, 
+        'week': 7, 
+        'day': 1
+    }.get(period, 30)
 
 
 class ProductTemplate(models.Model):
@@ -27,11 +33,22 @@ class ProductTemplate(models.Model):
         days_delta = _get_days_delta(period)
         start_date = fields.Date.today() - timedelta(days=days_delta)
 
-        sales = self.env['account.invoice.report'].read_group(
+        # sales = self.env['account.invoice.report'].read_group(
+        #     domain=[
+        #         ('invoice_date', '>=', start_date)
+        #     ],
+        #     fields=['product_id', 'quantity'],
+        #     groupby=['product_id']
+        # )
+        
+        # getting sales from pos orders instead of invoices
+        sales = self.env['pos.order.line'].read_group(
             domain=[
-                ('invoice_date', '>=', start_date)
+                ('order_id.date_order', '>=', start_date),
+                ('product_id', '!=', False),
+                ('order_id.state', 'in', ['paid', 'done', 'invoiced'])  # confirmed orders
             ],
-            fields=['product_id', 'quantity'],
+            fields=['product_id', 'qty'],
             groupby=['product_id']
         )
 
@@ -39,7 +56,7 @@ class ProductTemplate(models.Model):
 
         order_sum = {
             sale['product_id']:
-                sale['quantity'] for sale in sales
+                sale['qty'] for sale in sales
         }
 
         return order_sum

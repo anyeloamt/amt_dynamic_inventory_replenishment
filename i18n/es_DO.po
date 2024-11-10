@@ -1,0 +1,273 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* amt_dynamic_inventory_replenishment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-10 03:03+0000\n"
+"PO-Revision-Date: 2024-11-10 09:20-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_DO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.view_inventory_dashboard_kanban_product
+msgid ""
+"<br/>\n"
+"                    <span>Last Classification Date: </span>"
+msgstr ""
+"<br/>\n"
+"                    <span>Última fecha de clasificación: </span>"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.view_inventory_dashboard_kanban_product
+msgid ""
+"<br/>\n"
+"                    <span>Last Sales Qty: </span>"
+msgstr ""
+"<br/>\n"
+"                    <span>Última Cantidad vendida: </span>"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.view_inventory_dashboard_kanban_product
+msgid "<span>Demand Category: </span>"
+msgstr "<span>Categoría de demanda: </span>"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields.selection,name:amt_dynamic_inventory_replenishment.selection__product_reclassification_wizard__period__all
+msgid "All"
+msgstr "Todos"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.actions.server,name:amt_dynamic_inventory_replenishment.ir_cron_auto_classify_products_ir_actions_server
+msgid "Automated Product Classification"
+msgstr "Clasificación automática de productos"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.view_product_reclassification_wizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_inventory_demand_category__category_name
+msgid "Category Name"
+msgstr "Nombre de la categoría"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.actions.act_window,help:amt_dynamic_inventory_replenishment.demand_category_action
+msgid "Click to create a new Demand Category."
+msgstr "Haga clic para crear una nueva categoría de demanda."
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_inventory_demand_category__create_uid
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_product_reclassification_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_inventory_demand_category__create_date
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_product_reclassification_wizard__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields.selection,name:amt_dynamic_inventory_replenishment.selection__product_reclassification_wizard__period__day
+msgid "Day"
+msgstr "Día"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.actions.act_window,name:amt_dynamic_inventory_replenishment.demand_category_action
+#: model:ir.ui.menu,name:amt_dynamic_inventory_replenishment.menu_demand_category
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.demand_category_tree
+msgid "Demand Categories"
+msgstr "Categorías de demanda"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_product_product__demand_category_id
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_product_template__demand_category_id
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.demand_category_form
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.view_product_template_search
+msgid "Demand Category"
+msgstr "Categoría de demanda"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.view_product_template_search
+msgid "Demand Category Alta"
+msgstr "Categoría de demanda alta"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.view_product_template_search
+msgid "Demand Category Baja"
+msgstr "Categoría de demanda baja"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.view_product_template_search
+msgid "Demand Category Media"
+msgstr "Categoría de demanda media"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_inventory_demand_category__display_name
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_product_reclassification_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.view_product_template_search
+msgid "Exclude Uncategorized"
+msgstr "Excluir no categorizados"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields.selection,name:amt_dynamic_inventory_replenishment.selection__product_reclassification_wizard__period__fortnight
+msgid "Fortnight"
+msgstr "Quincena"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_product_reclassification_wizard__generate_reordering_rules
+msgid "Generate Reordering Rules"
+msgstr "Generar reglas de reabastecimiento"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:res.groups,comment:amt_dynamic_inventory_replenishment.group_inventory_demand_manager
+msgid "Group for managing inventory demand categories and product classification"
+msgstr "Grupo para administrar categorías de demanda de inventario y clasificación de productos"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_inventory_demand_category__id
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_product_reclassification_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.actions.act_window,name:amt_dynamic_inventory_replenishment.action_inventory_dashboard
+#: model:ir.ui.menu,name:amt_dynamic_inventory_replenishment.menu_inventory_dashboard
+msgid "Inventory Dashboard"
+msgstr "Tablero de Inventario"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model,name:amt_dynamic_inventory_replenishment.model_inventory_demand_category
+msgid "Inventory Demand Category for Dynamic Inventory Replenishment"
+msgstr "Categoría de demanda para reabastecimiento dinámico de inventario"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:res.groups,name:amt_dynamic_inventory_replenishment.group_inventory_demand_manager
+msgid "Inventory Demand Manager"
+msgstr "Administrador de demandas de inventario"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_product_product__last_classification_date
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_product_template__last_classification_date
+msgid "Last Classification Date"
+msgstr "Última fecha de clasificación"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_product_product__last_sales_qty
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_product_template__last_sales_qty
+msgid "Last Sales Quantity"
+msgstr "Última cantidad vendida"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_inventory_demand_category__write_uid
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_product_reclassification_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Actualizado por"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_inventory_demand_category__write_date
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_product_reclassification_wizard__write_date
+msgid "Last Updated on"
+msgstr "Actualizado en"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_inventory_demand_category__max_inventory
+msgid "Max Inventory"
+msgstr "Máximo Inventario"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.demand_category_kanban
+msgid "Max Inventory:"
+msgstr "Máximo Inventario:"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields.selection,name:amt_dynamic_inventory_replenishment.selection__product_reclassification_wizard__period__month
+msgid "Month"
+msgstr "Mes"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_product_reclassification_wizard__period
+msgid "Period"
+msgstr "Período"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model,name:amt_dynamic_inventory_replenishment.model_product_template
+msgid "Product"
+msgstr "Producto"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model,name:amt_dynamic_inventory_replenishment.model_product_reclassification_wizard
+msgid "Product Reclassification Wizard"
+msgstr "Wizard de reclasificación de productos"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.view_inventory_dashboard_graph
+msgid "Products by Demand Category"
+msgstr "Productos por categoría de demanda"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.demand_category_form
+msgid "Reclassify All Products"
+msgstr "Reclasificar todos productos"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.actions.act_window,name:amt_dynamic_inventory_replenishment.action_product_reclassification_wizard
+#: model:ir.actions.server,name:amt_dynamic_inventory_replenishment.action_inventory_dashboard_reclassify
+#: model:ir.ui.menu,name:amt_dynamic_inventory_replenishment.menu_reclassify_products_wizard
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.view_product_reclassification_wizard_form
+msgid "Reclassify Products"
+msgstr "Reclasificar productos"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_inventory_demand_category__reorder_point
+msgid "Reorder Point"
+msgstr "Punto de reorden"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.demand_category_kanban
+msgid "Reorder Point:"
+msgstr "Punto de reorden:"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields,field_description:amt_dynamic_inventory_replenishment.field_inventory_demand_category__sales_threshold
+msgid "Sales Threshold"
+msgstr "Umbral de ventas"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.demand_category_kanban
+msgid "Sales Threshold:"
+msgstr "Umbral de ventas:"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.view_product_reclassification_wizard_form
+msgid "Select Reflassification Period and Generation for Rules"
+msgstr "Seleccione el periodo de reclasificación y generación de reglas de reabastecimiento"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model_terms:ir.ui.view,arch_db:amt_dynamic_inventory_replenishment.view_product_template_search
+msgid "Uncategorized"
+msgstr "No categorizados"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields.selection,name:amt_dynamic_inventory_replenishment.selection__product_reclassification_wizard__period__week
+msgid "Week"
+msgstr "Semana"
+
+#. module: amt_dynamic_inventory_replenishment
+#: model:ir.model.fields.selection,name:amt_dynamic_inventory_replenishment.selection__product_reclassification_wizard__period__year
+msgid "Year"
+msgstr "Año"
