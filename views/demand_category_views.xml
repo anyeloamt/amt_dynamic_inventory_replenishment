@@ -84,5 +84,5 @@
     </record>
 
     <!-- menuitem definition -->
-    <menuitem id="menu_demand_category" name="Demand Categories" parent="stock.menu_stock_warehouse_mgmt" action="demand_category_action" sequence="10" />
+    <menuitem id="menu_demand_category" name="Demand Categories" parent="stock.menu_stock_warehouse_mgmt" action="demand_category_action" sequence="20" />
 </odoo>
