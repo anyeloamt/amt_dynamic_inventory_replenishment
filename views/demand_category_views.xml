@@ -53,10 +53,6 @@
         <field name="model">inventory.demand.category</field>
         <field name="arch" type="xml">
             <form string="Demand Category">
-                <header>
-                    <button name="%(action_product_reclassification_wizard)d" type="action" string="Reclassify All Products" class="oe_highlight"/>
-
-                </header>
                 <sheet>
                     <group>
                         <field name="category_name"/>
