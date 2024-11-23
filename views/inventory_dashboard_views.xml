@@ -1,6 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-
+﻿<odoo>
     <!-- Graph for products -->
     <record id="view_inventory_dashboard_graph" model="ir.ui.view">
         <field name="name">product.template.demand_category.graph</field>
@@ -17,7 +15,7 @@
         <field name="name">Inventory Dashboard</field>
         <field name="res_model">product.template</field>
         <field name="view_mode">graph,tree,kanban</field>
-        <field name="view_id" ref="view_inventory_dashboard_list"/>
+        <field name="view_id" ref="view_inventory_dashboard_graph"/>
         <field name="search_view_id" ref="view_product_template_search"/>
     </record>
 

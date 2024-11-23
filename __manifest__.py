@@ -9,10 +9,10 @@
     'category': 'Inventory',
     'data': [
         # views
-        'views/demand_category_views.xml',
         'views/product_views.xml',
-        'views/inventory_dashboard_views.xml',
         'views/product_reclassification_wizard_views.xml',
+        'views/inventory_dashboard_views.xml',
+        'views/demand_category_views.xml',
 
         # data
         'data/demand_category_data.xml',
